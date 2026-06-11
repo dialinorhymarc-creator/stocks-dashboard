@@ -1,29 +1,56 @@
+<div align="center">
+
 # 📈 Real-Time Stock Market Dashboard
 
-An interactive stock dashboard with live data, Bollinger Bands, RSI, MACD, and EMA overlays — built with Python, Dash, and Plotly.
+**A professional-grade stock analysis dashboard built with Python, Dash & Plotly**
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue)
-![Dash](https://img.shields.io/badge/Dash-2.17-green)
-![License](https://img.shields.io/badge/License-MIT-yellow)
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Dash](https://img.shields.io/badge/Dash-4.x-008DE4?style=for-the-badge&logo=plotly&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-5.x-3F4F75?style=for-the-badge&logo=plotly&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)
 
----
-
-## 🗂 Project Structure
-
-```
-stock-dashboard/
-├── app.py              ← Main application (all logic + layout)
-├── requirements.txt    ← Dependencies
-└── README.md
-```
+[Features](#-features) • [Demo](#-demo) • [Installation](#-installation) • [Usage](#-usage) • [Tech Stack](#-tech-stack) • [Deploy](#-deployment)
 
 ---
 
-## ⚙️ Setup — Step by Step
+![Dashboard Preview](screenshot.png)
 
-### Step 1 — Clone / create the project folder
+</div>
+
+---
+
+## ✨ Features
+
+| Feature | Description |
+|---|---|
+| 📊 **Live Candlestick Chart** | Real-time OHLC data via Yahoo Finance — no API key required |
+| 📉 **Bollinger Bands** | 20-period with shaded fill for visual clarity |
+| 📈 **EMA Overlays** | EMA 20 and EMA 50 trend lines |
+| ⚡ **RSI Indicator** | 14-period with overbought/oversold zones |
+| 🔁 **MACD Panel** | Line, signal, and color-coded histogram |
+| 💹 **Stats Bar** | Live price, % change, volume, 52W high/low, RSI value |
+| 🔍 **Ticker Search** | Search any stock, ETF, or index worldwide |
+| ⚡ **Quick Tickers** | One-click access to AAPL, TSLA, NVDA, MSFT, GOOGL, AMZN, META, SPY |
+| 🕐 **Multi-Interval** | Switch between 5m, 15m, 1h, and 1d timeframes |
+| 🔄 **Auto Refresh** | Dashboard refreshes every 60 seconds automatically |
+
+---
+
+## 🖥 Demo
+
+> Open your browser at **http://localhost:8050** after running the app locally.
+
+---
+
+## 🚀 Installation
+
+### Prerequisites
+- Python 3.10 or higher
+- pip
+
+### Step 1 — Clone the repository
 ```bash
-mkdir stock-dashboard
+git clone https://github.com/YOUR_USERNAME/stock-dashboard.git
 cd stock-dashboard
 ```
 
@@ -31,10 +58,10 @@ cd stock-dashboard
 ```bash
 python -m venv venv
 
-# Activate it:
-# Windows:
+# Windows
 venv\Scripts\activate
-# macOS / Linux:
+
+# macOS / Linux
 source venv/bin/activate
 ```
 
@@ -48,57 +75,74 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Open your browser at → **http://localhost:8050**
+Visit → **http://localhost:8050** 🎉
 
 ---
 
-## 🚀 Features
+## 📖 Usage
 
-| Feature | Details |
+1. **Search a stock** — type any ticker (e.g. `AAPL`, `BTC-USD`, `^GSPC`) and hit Search
+2. **Quick tickers** — click any button in the top-right for instant loading
+3. **Change timeframe** — use the interval dropdown (5m / 15m / 1h / 1d)
+4. **Read the indicators:**
+   - Price touching **BB Upper** → potential overbought zone
+   - Price touching **BB Lower** → potential oversold zone
+   - **RSI > 70** → overbought signal
+   - **RSI < 30** → oversold signal
+   - **MACD crosses Signal** → trend reversal signal
+
+---
+
+## 🛠 Tech Stack
+
+| Library | Purpose |
 |---|---|
-| Live Data | Fetched via `yfinance` — no API key needed |
-| Candlestick Chart | OHLC candles with color-coded up/down |
-| Bollinger Bands | 20-period, 2 std dev with fill |
-| EMA 20 / EMA 50 | Trend overlays |
-| RSI (14) | With overbought/oversold lines |
-| MACD | Line, signal, and histogram |
-| Stats Bar | Price, change %, volume, 52W high/low, RSI |
-| Quick Tickers | One-click AAPL, TSLA, NVDA, etc. |
-| Auto Refresh | Every 60 seconds |
-| Intervals | 5m, 15m, 1h, 1d |
+| [Dash](https://dash.plotly.com/) | Reactive Python web framework |
+| [Plotly](https://plotly.com/python/) | Interactive charting engine |
+| [yfinance](https://github.com/ranaroussi/yfinance) | Yahoo Finance market data |
+| [ta](https://github.com/bukosabino/ta) | Technical analysis indicators |
+| [Dash Bootstrap Components](https://dash-bootstrap-components.opensource.faculty.ai/) | UI layout & components |
+| [pandas](https://pandas.pydata.org/) | Data manipulation |
 
 ---
 
-## 📦 Tech Stack
+## 📁 Project Structure
 
-- **[Dash](https://dash.plotly.com/)** — Reactive Python web framework
-- **[Plotly](https://plotly.com/python/)** — Interactive charting
-- **[yfinance](https://github.com/ranaroussi/yfinance)** — Yahoo Finance data
-- **[pandas-ta](https://github.com/twopirllc/pandas-ta)** — Technical analysis indicators
-- **[Dash Bootstrap Components](https://dash-bootstrap-components.opensource.faculty.ai/)** — UI components
+```
+stock-dashboard/
+├── app.py              # Main application — layout, callbacks, indicators
+├── requirements.txt    # Python dependencies
+└── README.md           # You are here
+```
 
 ---
 
-## 🌐 Deploy to Render (Free)
+## ☁️ Deployment
 
-1. Push this project to a GitHub repo
-2. Go to [render.com](https://render.com) → New Web Service
-3. Connect your repo
-4. Set:
+### Deploy to Render (Free)
+
+1. Push this repo to GitHub
+2. Go to [render.com](https://render.com) → **New Web Service**
+3. Connect your GitHub repository
+4. Set the following:
    - **Build Command:** `pip install -r requirements.txt`
    - **Start Command:** `gunicorn app:server`
-5. Deploy — your dashboard is live 🎉
+5. Click **Deploy** — your dashboard is live 🌐
 
-> Add `gunicorn` to `requirements.txt` for deployment.
-
----
-
-## 📸 Screenshots
-
-> Add screenshots of your running dashboard here for GitHub impact!
+> Add `gunicorn` to `requirements.txt` before deploying.
 
 ---
 
 ## 📄 License
 
-MIT — feel free to use and modify.
+This project is licensed under the [MIT License](LICENSE) — feel free to use, modify, and distribute.
+
+---
+
+<div align="center">
+
+Made with ❤️ and Python
+
+⭐ **Star this repo if you found it useful!**
+
+</div>
