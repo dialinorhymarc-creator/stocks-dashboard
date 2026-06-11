@@ -13,7 +13,7 @@
 
 ---
 
-![Dashboard Preview](screenshot.png)<img width="1898" height="817" alt="DASHBOARD" src="https://github.com/user-attachments/assets/8a48c4d6-5f9d-4045-9d0e-c32403c2ae65" />
+![Dashboard Preview]<img width="1898" height="817" alt="DASHBOARD" src="https://github.com/user-attachments/assets/8a48c4d6-5f9d-4045-9d0e-c32403c2ae65" />
 
 </div>
 
