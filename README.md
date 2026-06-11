@@ -13,10 +13,9 @@
 
 ---
 
-![Dashboard Preview](<img width="1890" height="825" alt="image" src="https://github.com/user-attachments/assets/c452e199-b31d-4898-98e9-7941fce32cb9" />
-)
-
+![Dashboard Preview](<img width="1898" height="817" alt="DASHBOARD" src="https://github.com/user-attachments/assets/89f2c8c8-198e-4cfb-8c19-24bd160104d8" />)
 </div>
+
 
 ---
 
